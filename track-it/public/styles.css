@@ -1,0 +1,134 @@
+html{
+  min-height: 100vh;
+  position: relative;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #4300C2;
+}
+p{
+  font-size: 1.25rem;
+  display: inline;
+}
+h1{
+  font-size: 2.75rem;
+  display: inline;
+}
+h2{
+  font-size: 2.25rem;
+  display: inline;
+}
+h3{
+  font-size: 2rem;
+  display: inline;
+}
+h4{
+  font-size: 1.5rem;
+  display: inline;
+}
+
+/* Font and color Style */
+.black{
+  font-weight: 900;
+}
+.bold{
+  font-weight: bold;
+}
+.textCenter{
+  text-align: center;
+}
+
+/* header */
+.header{
+  background-color: #5800FF;
+  font-weight: bold;
+}
+.brand{
+  font-size: 2rem;
+}
+.headerText{
+  color: #FFC600 !important;
+}
+.container{
+  max-width: 100%;
+  padding: 0.5% 4%;
+}
+.navbar-toggler{
+  background-color: #FFC600;
+}
+
+/* content */
+.content{
+  padding: 20px 4%;
+}
+.outerContent{
+  padding: 20px 2%;
+}
+
+/* welcome header */
+.welcomeHeader{
+  background-color: #5800FF;
+  color: #fff;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 4px 4px 10px rgba(60, 0, 172, 0.6);
+}
+.userProfPic{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  align-items: flex-end;
+}
+
+/* balance */
+.balanceContainer{
+  padding: 15px 0;
+}
+.balance{
+  border-radius: 5px;
+  background-color: #FFC600;
+  color:#4300C2;
+  font-weight: bold;
+  display: inline;
+  padding: 4px;
+  margin-left: 10px;
+  font-size: 1.25rem;
+}
+.balanceRed{
+  background-color: #e2005e;
+  color: #fff;
+}
+.balanceGreen{
+  background-color: #8eca01;
+  color: #000;
+}
+
+/* summary */
+.summaryBox{
+  border-radius: 20px;
+  background-color: #fff;
+  width: 100%;
+  color:#4300C2;
+  box-shadow: 4px 4px 10px rgba(60, 0, 172, 0.6)
+}
+.summaryContent{
+  padding: 10px 4% 0 4%;
+}
+#summaryLine{
+  border-top: 5px solid #FFC600;
+  opacity: 1;
+  /* height: 5px;
+  background-color: #FFC600; */
+  width: 95%;
+  margin: 10px auto;
+}
+
+/* footer */
+.footer{
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #000000;
+}
