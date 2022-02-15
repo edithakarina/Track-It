@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import BoxedBalance from "../boxedBalance";
 
+import BoxedBalance from "../boxedBalance";
 
 function Balance(){
   const [currency, setCurrency] = useState("Rp.");
@@ -9,7 +9,7 @@ function Balance(){
   return(
     <div className="balanceContainer">
       <h4 className="bold">Your balance</h4>
-      <BoxedBalance balance={balance} currency={currency}/>
+      <BoxedBalance balance={balance} currency={currency} needStatus={false} needOperator={true}/>
     </div>
   );
 }

@@ -8,7 +8,7 @@ function TodaySummary(){
   const[currency, setCurrency] = useState("Rp.");
 
   return(
-    <div className="outerContent summaryBox">
+    <div className="outerContent box summaryBox">
       <Grid container >
         <Grid item className="textCenter" xs={12}>
           <p className="bold">Today's Summary</p>
@@ -19,7 +19,7 @@ function TodaySummary(){
               <p className="bold">Income</p>
             </Grid>
             <Grid item>
-              <BoxedBalance balance={income} currency={currency} needStatus={false}/>
+              <BoxedBalance balance={income} currency={currency} needStatus={false} needOperator={false}/>
             </Grid>
           </Grid>
         </Grid>
@@ -29,7 +29,7 @@ function TodaySummary(){
               <p className="bold">Expense</p>
             </Grid>
             <Grid item>
-              <BoxedBalance balance={expense} currency={currency} needStatus={false}/>
+              <BoxedBalance balance={expense} currency={currency} needStatus={false} needOperator={false}/>
             </Grid>
           </Grid>
         </Grid>
@@ -42,7 +42,7 @@ function TodaySummary(){
               <p className="bold">Revenue</p>
             </Grid>
             <Grid item>
-              <BoxedBalance balance={income-expense} currency={currency} needStatus={true}/>
+              <BoxedBalance balance={income-expense} currency={currency} needStatus={true} needOperator={true}/>
             </Grid>
           </Grid>
         </Grid>

@@ -1,78 +1,88 @@
-html{
+html {
   min-height: 100vh;
   position: relative;
 }
-body{
-  font-family: 'Montserrat', sans-serif;
-  background-color: #4300C2;
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #4300c2;
 }
-p{
+p {
   font-size: 1.25rem;
   display: inline;
 }
-h1{
+h1 {
   font-size: 2.75rem;
   display: inline;
 }
-h2{
+h2 {
   font-size: 2.25rem;
   display: inline;
 }
-h3{
+h3 {
   font-size: 2rem;
   display: inline;
 }
-h4{
+h4 {
   font-size: 1.5rem;
   display: inline;
 }
+#root{
+  min-height: 100vh;
+}
 
 /* Font and color Style */
-.black{
+.black {
   font-weight: 900;
 }
-.bold{
+.bold {
   font-weight: bold;
 }
-.textCenter{
+.textCenter {
   text-align: center;
 }
 
+/* box/container */
+.box {
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(50, 1, 141, 0.6);
+}
+
 /* header */
-.header{
-  background-color: #5800FF;
+.header {
+  background-color: #5800ff;
   font-weight: bold;
 }
-.brand{
+.brand {
   font-size: 2rem;
 }
-.headerText{
-  color: #FFC600 !important;
+.headerText {
+  color: #ffc600 !important;
 }
-.container{
+.container {
   max-width: 100%;
   padding: 0.5% 4%;
 }
-.navbar-toggler{
-  background-color: #FFC600;
+.navbar-toggler {
+  background-color: #ffc600;
 }
 
 /* content */
-.content{
+.content {
   padding: 20px 4%;
 }
-.outerContent{
+.outerContent {
   padding: 20px 2%;
 }
 
 /* welcome header */
-.welcomeHeader{
-  background-color: #5800FF;
+.welcomeHeader {
+  background-color: #5800ff;
   color: #fff;
   border-radius: 0 0 50px 50px;
   box-shadow: 4px 4px 10px rgba(60, 0, 172, 0.6);
 }
-.userProfPic{
+.userProfPic {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -80,41 +90,38 @@ h4{
 }
 
 /* balance */
-.balanceContainer{
+.balanceContainer {
   padding: 15px 0;
 }
-.balance{
+.balance {
   border-radius: 5px;
-  background-color: #FFC600;
-  color:#4300C2;
+  background-color: #ffc600;
+  color: #4300c2;
   font-weight: bold;
   display: inline;
   padding: 4px;
   margin-left: 10px;
   font-size: 1.25rem;
 }
-.balanceRed{
+.balanceRed {
   background-color: #e2005e;
   color: #fff;
 }
-.balanceGreen{
+.balanceGreen {
   background-color: #8eca01;
   color: #000;
 }
 
 /* summary */
-.summaryBox{
-  border-radius: 20px;
+.summaryBox {
   background-color: #fff;
-  width: 100%;
-  color:#4300C2;
-  box-shadow: 4px 4px 10px rgba(60, 0, 172, 0.6)
+  color: #4300c2;
 }
-.summaryContent{
+.summaryContent {
   padding: 10px 4% 0 4%;
 }
-#summaryLine{
-  border-top: 5px solid #FFC600;
+#summaryLine {
+  border-top: 5px solid #ffc600;
   opacity: 1;
   /* height: 5px;
   background-color: #FFC600; */
@@ -122,13 +129,61 @@ h4{
   margin: 10px auto;
 }
 
+/* transaction */
+.transactionBox {
+  background-color: #5800ff;
+  color: #fff;
+}
+.transactionList {
+  height: 320px;
+  overflow-y: scroll;
+  padding-top: 10px;
+}
+/* scrollbar */
+/* width */
+.transactionList::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+.transactionList::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+/* Handle */
+.transactionList::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 5px;
+}
+/* Handle on hover */
+.transactionList::-webkit-scrollbar-thumb:hover {
+  background: #acacac;
+}
+.tag {
+  border-radius: 3px;
+  background-color: #fff;
+  color: #4300c2;
+  font-weight: bold;
+  display: inline;
+  width: fit-content;
+  padding: 4px;
+  font-size: 0.8rem;
+}
+.transactionContainer {
+  border-radius: 10px;
+  background-color: #ffc600;
+  color: #4300c2;
+  padding: 2%;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
 /* footer */
-.footer{
+.footer {
   text-align: center;
   padding: 10px 0;
   font-size: 0.75rem;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   width: 100%;
   color: #000000;
 }

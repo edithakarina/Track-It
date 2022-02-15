@@ -22,7 +22,7 @@ function WelcomeHeader() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={2} md={1}>
+        <Grid item>
           <img src={"https://via.placeholder.com/150"} alt="profile picture" className="userProfPic"/>
         </Grid>
       </Grid>

@@ -1,8 +1,8 @@
 function Footer(){
   return(
-    <div className="footer">
+    <footer className="footer">
       Editha Karina H. {(new Date().getFullYear())}
-    </div>
+    </footer>
   );
 }
 
