@@ -1,7 +1,20 @@
 import getBalance from "../function/getBalance";
 
+import { makeStyles } from '@mui/styles';
+
+const useStyles= makeStyles((theme)=>({
+  bgColor:{
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.secondary.contrastText
+  }
+}));
+
+
 function BoxedBalance({ balance, currency, needStatus, needOperator }) {
-  let balanceClass= "";
+  
+  const classes = useStyles();
+
+  let balanceClass= classes.bgColor;
   let operator = "";
   let tempBalance = 0;
 
@@ -11,8 +24,9 @@ function BoxedBalance({ balance, currency, needStatus, needOperator }) {
   } else if (balance > 0) {
       balanceClass = "balanceGreen";
   }else {
-    balanceClass = "";
+    balanceClass = classes.bgColor;
   }
+  console.log(balanceClass);
 }
 
 if(needOperator){
@@ -27,20 +41,8 @@ if(needOperator){
   tempBalance=balance;
 }
 
-  // function determineClass() {
-  //   if (balance < 0) {
-  //       balanceClass = "balanceRed";
-  //   } else if (balance > 0) {
-  //       balanceClass = "balanceGreen";
-  //   }else {
-  //     balanceClass = "";
-  //   }
-  //   console.log(balanceClass);
-  //   return balanceClass;
-  // }
-
   return (
-    <div className={"balance " + balanceClass}>
+    <div className={"balance "+balanceClass}>
     {operator}  {currency} {getBalance(tempBalance)}</div>
   )
 }

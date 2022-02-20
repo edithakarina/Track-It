@@ -1,13 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
+
 import Grid from "@mui/material/Grid";
+import { makeStyles } from '@mui/styles';
 
 import Balance from "./balance";
+import { ClassNames } from "@emotion/react";
+import theme from "../../styles/colors";
 
+const useStyles= makeStyles((theme)=>({
+  bgColor:{
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.primary.contrastText
+  }
+}));
 function WelcomeHeader() {
   const [userName, setUserName] = useState("John Doe");
 
+  const classes = useStyles();
+
   return (
-    <div className="welcomeHeader">
+    <div className={classes.bgColor + " welcomeHeader"}>
       <Grid container className="content" alignItems="center" justifyContent="space-between">
         <Grid item xs={8} md={10} >
           <Grid container spacing={0} alignItems="flex-end">
