@@ -1,6 +1,6 @@
 import {useState} from "react";
 import Grid from "@mui/material/Grid";
-import BoxedBalance from "../boxedBalance";
+import BoxedBalance from "../../../components/boxedBalance";
 
 import { makeStyles } from '@mui/styles';
 

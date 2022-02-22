@@ -1,13 +1,10 @@
 import { useState } from "react";
 import Grid from "@mui/material/Grid";
-import BoxedBalance from "../../boxedBalance";
+import BoxedBalance from "../boxedBalance";
 import { makeStyles } from '@mui/styles';
+import Tag from "../button/tag";
 
 const useStyles= makeStyles((theme)=>({
-  tag:{
-    backgroundColor: theme.palette.white.main,
-    color: theme.palette.white.contrastText
-  },
   container:{
     backgroundColor: theme.palette.secondary.main,
     color: theme.palette.secondary.contrastText
@@ -22,6 +19,10 @@ function TransactionDetails({desc, tag, amount, currency, transactionType}) {
     amount = -amount;
   }
 
+  function handleTagClick(content){
+    console.log("clicked "+content);
+  }
+
   return (
     <Grid container className={classes.container+" transactionContainer"}
     alignItems="center"
@@ -32,9 +33,7 @@ function TransactionDetails({desc, tag, amount, currency, transactionType}) {
             <p className="bold">{desc}</p>
           </Grid>
           <Grid item xs={12}>
-            <div className={classes.tag + " tag"}>
-              #{tag}
-            </div>
+            <Tag action={handleTagClick} content={tag} color="white"/>
           </Grid>
         </Grid>
       </Grid>

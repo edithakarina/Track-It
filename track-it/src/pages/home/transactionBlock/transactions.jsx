@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Grid from "@mui/material/Grid";
-import TransactionDetails from "./transactionDetails";
+import TransactionDetails from "../../../components/cards/transactionDetails";
 
 import { makeStyles } from '@mui/styles';
 
@@ -12,8 +12,6 @@ const useStyles= makeStyles((theme)=>({
   }
 }));
 
-
-
 function Transactions() {
   
   const classes = useStyles();
@@ -22,7 +20,7 @@ function Transactions() {
   const [transactionList, setTransactionList] = useState([{
     desc: "testing", amount: 30000, currency: "Rp.", tag: "what", transactionType: "income"
   }, {
-    desc: "testing2", amount: 50000, currency: "Rp.", tag: "what", transactionType: "expense"
+    desc: "testing2", amount: 50000, currency: "Rp.", tag: "bruh", transactionType: "expense"
   }, {
     desc: "testing2", amount: 50000, currency: "Rp.", tag: "what", transactionType: "expense"
   }, {

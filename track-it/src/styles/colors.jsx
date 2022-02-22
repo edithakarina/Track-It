@@ -17,7 +17,8 @@ const theme = createTheme({
     tertiary: {
       main: "#4300c2",
       light: "#6833ce",
-      dark: "#2e0087"
+      dark: "#2e0087",
+      contrastText:"#fff"
     },
     white:{
       main:"#fff",
@@ -35,8 +36,7 @@ const theme = createTheme({
         root: {
           fontFamily: "Montserrat",
           fontWeight: "bold",
-          borderRadius: "8px",
-          height: "60px"
+          textTransform: "none"
         }
       }
     }

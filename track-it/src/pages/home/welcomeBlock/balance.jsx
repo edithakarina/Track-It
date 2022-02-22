@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import BoxedBalance from "../boxedBalance";
+import BoxedBalance from "../../../components/boxedBalance";
 
 function Balance(){
   const [currency, setCurrency] = useState("Rp.");

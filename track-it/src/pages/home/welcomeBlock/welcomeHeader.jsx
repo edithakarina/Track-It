@@ -4,8 +4,6 @@ import Grid from "@mui/material/Grid";
 import { makeStyles } from '@mui/styles';
 
 import Balance from "./balance";
-import { ClassNames } from "@emotion/react";
-import theme from "../../styles/colors";
 
 const useStyles= makeStyles((theme)=>({
   bgColor:{
@@ -13,6 +11,7 @@ const useStyles= makeStyles((theme)=>({
     color: theme.palette.primary.contrastText
   }
 }));
+
 function WelcomeHeader() {
   const [userName, setUserName] = useState("John Doe");
 
