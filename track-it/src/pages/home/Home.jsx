@@ -13,10 +13,12 @@ function Home() {
   return (
     <div>
       {/* <ThemeProvider theme={theme}> */}
-        {/* <Header /> */}
+      <Header />
+      <div className="bodyContainer">
         <WelcomeHeader />
         <HomeBody />
-        {/* <Footer /> */}
+      </div>
+      <Footer />
       {/* </ThemeProvider> */}
     </div>
   );

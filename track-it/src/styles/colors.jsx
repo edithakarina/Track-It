@@ -22,6 +22,7 @@ const theme = createTheme({
     },
     white:{
       main:"#fff",
+      dark: "#ffd133",
       contrastText:"#4300c2"
     },
     action: {
@@ -37,6 +38,33 @@ const theme = createTheme({
           fontFamily: "Montserrat",
           fontWeight: "bold",
           textTransform: "none"
+        }
+      }
+    },
+    MuiDialog:{
+      styleOverrides:
+      {
+        paper:{
+          borderRadius: "20px",
+          backgroundColor: "#ffc600"
+        },
+        
+      }
+    },
+    MuiDialogTitle:{
+      styleOverrides:
+      {
+        root:{
+          fontFamily: "Montserrat",
+          fontWeight: "bold",
+        }
+      }
+    },
+    MuiDialogContent:{
+      styleOverrides:
+      {
+        root:{
+          fontFamily: "Montserrat"
         }
       }
     }

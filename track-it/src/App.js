@@ -1,26 +1,31 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from "./pages/home/Home";
 import theme from "./styles/colors";
 import { ThemeProvider } from "@mui/material";
-import Header from './components/Header';
-import Footer from './components/Footer';
 import NewTransaction from './pages/newTransaction/NewTransaction';
+import PrivateRoute from "./route/privateRoute";
+import PublicRoute from "./route/publicRoute";
+import Login from './pages/login/Login';
+import LandingPage from './pages/landing/landing';
 
 function App() {
+  const [isAuthenticated, setAuthentication] = useState(false);
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <Suspense fallback={<div>Loading...</div>}>
-          <Header />
-          <div className="bodyContainer">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/newTransaction" element={<NewTransaction />} />
-            </Routes>
-          </div>
-          <Footer />
+          <Routes>
+            <Route path="/" element={
+              <PublicRoute isAuthenticated={isAuthenticated}>
+                <LandingPage/>
+              </PublicRoute>
+            } />
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/home" element={<Home />} />
+            <Route path="/newTransaction" element={<NewTransaction />} />
+          </Routes>
         </Suspense>
       </ThemeProvider>
     </Router>
